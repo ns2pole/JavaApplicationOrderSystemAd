@@ -5,16 +5,14 @@ import java.util.List;
 //伝票の情報全てを表すクラス
 public class Order {
     List<Menu> menuList;
-    int guestNum;
     int tableNum;
 
     Status status = null;
 
     Staff staff;
 
-    Order(List<Menu> menuList, int guestNum, int tableNum, Staff staff) {
+    Order(List<Menu> menuList, int tableNum, Staff staff) {
         this.menuList = menuList;
-        this.guestNum = guestNum;
         this.tableNum = tableNum;
         this.staff = staff;
     }

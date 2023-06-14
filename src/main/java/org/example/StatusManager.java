@@ -6,7 +6,6 @@ public class StatusManager {
     //レジの会計ボタンを押したら以下が動く
     public static void pay(Order o) {
         o.status = ISPAID;
-        Shop.tables.get(o.tableNum).isUsing = false;
     }
 
     //手持ちのハンディのオーダー送信ボタンを押したら以下が動く

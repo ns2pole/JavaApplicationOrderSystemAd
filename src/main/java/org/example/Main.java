@@ -25,16 +25,20 @@ public class Main {
         Staff staff2 = new Staff("スタッフ2");
         StaffManager.staffList = List.of(staff1, staff2);
 
+        //お客さんが座ったら座席登録
+        TableManager.take(2,2);
+        TableManager.take(3,2);
+        TableManager.take(4,2);
+
         //注文の生成と利用卓の登録
-        Order order1 = new Order(menuList1, 2, 2, staff1);
-        Shop.tables.get(order1.tableNum).isUsing = true;
-        Order order2 = new Order(menuList2, 2, 3, staff2);
-        Shop.tables.get(order2.tableNum).isUsing = true;
-        Order order3 = new Order(menuList3, 1, 4, staff2);
-        Shop.tables.get(order3.tableNum).isUsing = true;
+        Order order1 = new Order(menuList1, 2, staff1);
+        Order order2 = new Order(menuList2, 3, staff2);
+        Order order3 = new Order(menuList3, 4, staff2);
 
         //支払い処理
         StatusManager.pay(order2);
+        //退席処理
+        TableManager.reset(order2.tableNum);
 
         //金額計算
         System.out.println(order1.getTotalAmount());
