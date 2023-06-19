@@ -4,6 +4,6 @@ import static org.example.Category.*;
 
 public class Anpan extends Menu{
     Anpan() {
-        super(300, "あんぱん", BREAD);
+        super(3, 300, "あんぱん", BREAD);
     }
 }

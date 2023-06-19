@@ -3,6 +3,6 @@ import static org.example.Category.*;
 
 public class Coffee extends Menu{
     Coffee() {
-        super(400, "coffee", DRINK);
+        super(1, 400, "coffee", DRINK);
     }
 }

@@ -15,8 +15,8 @@ public class StatusManager {
 
     //手持ちのハンディの「座席と人数」登録ボタンを押したら以下が動く
     public static void takeSeat(int tableNum, int guestNum) {
-        Shop.tables.get(tableNum).isUsing = true;
-        Shop.tables.get(tableNum).guestNum = guestNum;
+        TableManager.tables.get(tableNum).isUsing = true;
+        TableManager.tables.get(tableNum).guestNum = guestNum;
     }
 
 }
