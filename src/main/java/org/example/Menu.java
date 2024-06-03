@@ -4,7 +4,6 @@ public abstract class Menu {
     int id;
     int price;
     String name;
-
     Category category;
 
     Menu(int id, int price, String name, Category category) {

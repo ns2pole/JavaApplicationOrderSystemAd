@@ -4,8 +4,8 @@ import java.util.List;
 
 public class StaffManager {
     public static List<Staff> staffList = List.of(
-            new Staff(1,"スタッフ1"),
-            new Staff(2,"スタッフ2")
+            new Staff(1,"山田"),
+            new Staff(2,"中津")
     );
 
     public static Staff getById(int staffId) {
@@ -14,7 +14,7 @@ public class StaffManager {
                 return staffList.get(i);
             }
         }
+        throw new IllegalArgumentException("スタッフが存在しません。");
         // スタッフがいませんのエラーを返す？
-        return null;
     }
 }
